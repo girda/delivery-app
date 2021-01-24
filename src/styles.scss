@@ -1,1 +1,21 @@
-/* You can add global styles to this file, and also import other style files */
+@import './modules/shared/styles/reset';
+@import './modules/shared/styles/variables';
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 400;
+  src: url('./fonts/Montserrat/Montserrat-Regular.eot?') format('eot'), url('./fonts/Montserrat/Montserrat-Regular.woff') format('woff'), url('./fonts/Montserrat/Montserrat-Regular.ttf') format('truetype'), url('./fonts/Montserrat/Montserrat-Regular.svg#Montserrat') format('svg');
+}
+
+@font-face {
+  font-family: Montserrat;
+  font-weight: 700;
+  src: url('./fonts/Montserrat/Montserrat-Bold.eot?') format('eot'), url('./fonts/Montserrat/Montserrat-Bold.woff') format('woff'), url('./fonts/Montserrat/Montserrat-Bold.ttf') format('truetype'), url('./fonts/Montserrat/Montserrat-Bold.svg#Montserrat') format('svg');
+}
+
+body {
+  font-family: Montserrat, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  background-color: $color-brand;
+}
