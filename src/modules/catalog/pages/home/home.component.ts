@@ -8,6 +8,17 @@ declare var device;
 })
 export class HomeComponent implements OnInit {
   myDeviceData: string;
+
+  catalogData = [
+    {img: 'catalog-1.webp', title: 'Супермаркеты'},
+    {img: 'catalog-2.webp', title: 'Кофе и десерты'},
+    {img: 'catalog-3.webp', title: 'Экспресс Курьер'},
+    {img: 'catalog-4.webp', title: 'Подарки'},
+    {img: 'catalog-5.webp', title: 'Аптеки'},
+    {img: 'catalog-6.webp', title: 'Еда'},
+    // {img: 'catalog-7.webp', title: 'Что угодно'},
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

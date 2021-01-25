@@ -1,0 +1,28 @@
+@import "../../../shared/styles/variables";
+
+.list {
+
+  &__item {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid $gray;
+
+    &-icon {
+      margin-right: 10px;
+    }
+
+    &-arrow {
+      margin-left: auto;
+    }
+
+    &-svg {
+      display: flex;
+    }
+  }
+
+  &__link {
+
+  }
+
+}

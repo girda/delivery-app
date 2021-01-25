@@ -1,0 +1,25 @@
+<div class="product-list">
+  <div class="product-list__header">
+    <a class="product-list__back"
+       routerLink="/catalog/home"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#arrow-left'"
+        [width]="'30px'"
+        [viewBox]="'0 0 24 24'"
+        class="product-list__svg"
+      ></svg-icon-sprite>
+      Назад
+    </a>
+
+    <div class="product-list__header-logo">
+      <span>LOGO</span>
+    </div>
+
+  </div>
+
+  <div class="product-list__cards">
+    <app-product-card></app-product-card>
+  </div>
+</div>
+

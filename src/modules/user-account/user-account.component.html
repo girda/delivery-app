@@ -1,1 +1,22 @@
-<p>user-account works!</p>
+<div class="user-account">
+
+  <div class="user-account__header">
+    <a class="user-account__back"
+       routerLink="/catalog/home"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#arrow-left'"
+        [width]="'30px'"
+        [viewBox]="'0 0 24 24'"
+        class="user-account__svg"
+      ></svg-icon-sprite>
+      Назад
+    </a>
+
+  </div>
+
+  <app-profile></app-profile>
+
+  <app-list></app-list>
+
+</div>

@@ -1,0 +1,32 @@
+@import "../../../shared/styles/variables";
+
+.product-card {
+  padding: 10px;
+  border: 1px solid $color-brand;
+  border-radius: 5px;
+
+  &__title {
+    text-align: center;
+    margin-bottom: 10px;
+  }
+
+  &__in {
+    display: flex;
+    justify-content: space-between;
+  }
+
+  &__col {
+    width: 48%;
+  }
+
+  &__about
+
+  &__attr {
+
+  }
+
+  &__value {
+
+  }
+
+}

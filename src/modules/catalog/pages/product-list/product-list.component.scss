@@ -1,0 +1,35 @@
+@import "../../../shared/styles/variables";
+
+.product-list {
+  height: 100vh;
+  background-color: $white;
+
+
+  &__header {
+    position: relative;
+    display: flex;
+    padding: 10px 0;
+    border-bottom: 1px solid $gray;
+
+    &-logo {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    color: $secondary-color-text;
+  }
+
+  &__svg {
+    display: flex;
+  }
+
+  &__cards {
+    padding: 15px;
+  }
+}

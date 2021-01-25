@@ -1,15 +1,50 @@
 <div class="out">
   <header class="header">
-  <span class="header__icon">
-        <svg-icon-sprite
-          [src]="'assets/sprites/sprite.svg#user'"
-          [width]="'15px'"
-          class="header__svg"
-        ></svg-icon-sprite>
-  </span>
 
-    <button (click)="showDeviceDetails()">showDeviceDetails</button>
-    <button (click)="showGeolocationDetails()">showGeolocationDetails</button>
+    <div class="header__icon"
+         routerLink="/user-account"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#user'"
+        [width]="'30px'"
+        [attr.style]="'color: #ffffff'"
+        class="header__svg"
+      ></svg-icon-sprite>
+    </div>
+
+    <div class="user-location">
+      <div class="user-location__icon">
+        <svg-icon-sprite
+          [src]="'assets/sprites/sprite.svg#location'"
+          [width]="'20px'"
+          class="user-location__svg"
+        ></svg-icon-sprite>
+      </div>
+
+      <div class="user-location__text">текущее местоположение</div>
+
+      <div class="user-location__icon">
+        <svg-icon-sprite
+          [src]="'assets/sprites/sprite.svg#arrow-down'"
+          [width]="'15px'"
+          [viewBox]="'0 0 20 20'"
+          class="user-location__svg"
+        ></svg-icon-sprite>
+      </div>
+    </div>
+
+    <div class="header__icon">
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#basket'"
+        [width]="'30px'"
+        [attr.style]="'color: #ffffff'"
+        [viewBox]="'0 0 24 24'"
+        class="header__svg"
+      ></svg-icon-sprite>
+    </div>
+
+    <!--    <button (click)="showDeviceDetails()">showDeviceDetails</button>-->
+    <!--    <button (click)="showGeolocationDetails()">showGeolocationDetails</button>-->
   </header>
 
   <main class="home">
@@ -18,16 +53,13 @@
       <div class="category">
 
         <div class="category__in">
-
-            <div class="category__item category__item--mt"><img src="assets/images/palm.svg" alt=""></div>
-            <div class="category__item"><img src="assets/images/swimsuit.svg" alt=""></div>
-            <div class="category__item category__item--mt"><img src="assets/images/umbrela.svg" alt=""></div>
-            <div class="category__item"><img src="assets/images/palm.svg" alt=""></div>
-            <div class="category__item category__item--minus-mt category__item--center"><img src="assets/images/swimsuit.svg" alt=""></div>
-            <div class="category__item"><img src="assets/images/umbrela.svg" alt=""></div>
-            <div class="category__item category__item--minus-mt"><img src="assets/images/cocktail.svg" alt=""></div>
-
-
+          <a class="category__item"
+             *ngFor="let item of catalogData"
+             routerLink="/catalog/list"
+          >
+            <img src="assets/images/{{item.img}}" alt="{{item.title}}">
+            <span class="category__item-title">{{item.title}}</span>
+          </a>
         </div>
 
       </div>
@@ -36,7 +68,6 @@
   </main>
 
   <footer class="footer">
-    footer
   </footer>
 </div>
 

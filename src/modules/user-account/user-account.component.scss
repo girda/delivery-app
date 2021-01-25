@@ -1,0 +1,21 @@
+@import "../shared/styles/variables";
+
+.user-account {
+  height: 100vh;
+  background-color: $white;
+
+
+  &__header {
+    padding: 10px 0;
+  }
+
+  &__back {
+    display: flex;
+    align-items: center;
+    color: $secondary-color-text;
+  }
+
+  &__svg {
+    display: flex;
+  }
+}
