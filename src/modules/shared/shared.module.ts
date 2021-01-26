@@ -2,20 +2,24 @@ import {NgModule} from '@angular/core';
 import {ProductCardComponent} from './components/product-card/product-card.component';
 import {ProductGroupComponent} from './components/product-group/product-group.component';
 import {ProductComponent} from './components/product-group/product/product.component';
-import { ModalComponent } from './components/modal/modal.component';
+import {ModalProductMenuComponent} from './components/modals/modal-product-menu/modal-product-menu.component';
+import {MatDialogModule} from '@angular/material/dialog';
+import {IconSpriteModule} from "ng-svg-icon-sprite";
 
 @NgModule({
-  imports: [],
+  imports: [
+    IconSpriteModule
+  ],
   declarations: [
     ProductCardComponent,
     ProductGroupComponent,
     ProductComponent,
-    ModalComponent
+    ModalProductMenuComponent
   ],
   exports: [
     ProductCardComponent,
     ProductGroupComponent,
-    ModalComponent
+    MatDialogModule
   ]
 })
 export class SharedModule {

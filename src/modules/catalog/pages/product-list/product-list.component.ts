@@ -1,4 +1,6 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
+import {MatDialog} from "@angular/material/dialog";
+import {ModalProductMenuComponent} from "../../../shared/components/modals/modal-product-menu/modal-product-menu.component";
 
 @Component({
   selector: 'app-product-list',
@@ -8,7 +10,8 @@ import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 export class ProductListComponent implements OnInit {
 
   @ViewChild('buttonMenuText') buttonMenuText: ElementRef;
-  constructor() { }
+
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -19,6 +22,10 @@ export class ProductListComponent implements OnInit {
     } else {
       this.buttonMenuText.nativeElement.style.display = 'block';
     }
+  }
+
+  openMenu(): void {
+    this.matDialog.open(ModalProductMenuComponent, {data: {title: 'Меню'}});
   }
 
 }

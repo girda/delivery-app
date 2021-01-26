@@ -26,7 +26,10 @@
     <app-product-group></app-product-group>
   </div>
 
-  <button class="product-list__btn" (window:scroll)="fixedBtn($event)">
+  <button class="product-list__btn"
+          (window:scroll)="fixedBtn($event)"
+          (click)="openMenu()"
+  >
     <svg-icon-sprite
       [src]="'assets/sprites/sprite.svg#menu'"
       [width]="'25px'"
@@ -36,9 +39,5 @@
     <span class="product-list__btn-text" #buttonMenuText>Меню</span>
   </button>
 
-
-  <app-modal [title]="'Title'">
-    List
-  </app-modal>
 </div>
 
