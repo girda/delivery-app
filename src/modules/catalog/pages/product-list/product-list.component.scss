@@ -1,14 +1,15 @@
 @import "../../../shared/styles/variables";
 
 .product-list {
-  height: 100vh;
-  background-color: $white;
-
+  min-height: 100vh;
+  background-color: $gray;
+  padding-bottom: 1px;
 
   &__header {
     position: relative;
     display: flex;
     padding: 10px 0;
+    background-color: $white;
     border-bottom: 1px solid $gray;
 
     &-logo {
@@ -29,7 +30,28 @@
     display: flex;
   }
 
-  &__cards {
-    padding: 15px;
+  &__btn {
+    position: fixed;
+    right: 20px;
+    bottom: 20px;
+    display: flex;
+    align-items: center;
+    padding: 5px;
+    background-color: $white;
+    border: 1px solid $black;
+    border-radius: 30px;
+
+    &-text {
+      margin-left: 10px;
+    }
   }
+
+  &__group {
+    margin-bottom: 10px;
+
+    &:last-of-type {
+      margin-bottom: 0;
+    }
+  }
+
 }

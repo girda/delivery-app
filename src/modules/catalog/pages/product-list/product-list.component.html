@@ -18,8 +18,27 @@
 
   </div>
 
-  <div class="product-list__cards">
-    <app-product-card></app-product-card>
+  <div class="product-list__group">
+    <app-product-group></app-product-group>
   </div>
+
+  <div class="product-list__group">
+    <app-product-group></app-product-group>
+  </div>
+
+  <button class="product-list__btn" (window:scroll)="fixedBtn($event)">
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#menu'"
+      [width]="'25px'"
+      [viewBox]="'0 0 24 24'"
+      class="product-list__svg"
+    ></svg-icon-sprite>
+    <span class="product-list__btn-text" #buttonMenuText>Меню</span>
+  </button>
+
+
+  <app-modal [title]="'Title'">
+    List
+  </app-modal>
 </div>
 
