@@ -1,5 +1,5 @@
 import {Component, Inject, OnInit} from '@angular/core';
-import {MAT_DIALOG_DATA, MatDialogRef} from "@angular/material/dialog";
+import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-modal-product-menu',
@@ -18,4 +18,15 @@ export class ModalProductMenuComponent implements OnInit {
   closeModal(): void {
     this.dialogRef.close();
   }
+
+  scrollToProduct(id): void {
+    this.dialogRef.close();
+    this.dialogRef.afterClosed().subscribe(
+      () => {
+        document.getElementById(id).scrollIntoView();
+        window.scrollBy(0, -50); // y: -50 - высота хедера
+      }
+    );
+  }
+
 }

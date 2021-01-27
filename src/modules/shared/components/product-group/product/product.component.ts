@@ -1,4 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, Input, OnInit} from '@angular/core';
+import {ModalProfileEditComponent} from '../../modals/modal-profile-edit/modal-profile-edit.component';
+import {ModalProductComponent} from '../../modals/modal-product/modal-product.component';
+import {MatDialog} from '@angular/material/dialog';
 
 @Component({
   selector: 'app-product',
@@ -7,9 +10,16 @@ import { Component, OnInit } from '@angular/core';
 })
 export class ProductComponent implements OnInit {
 
-  constructor() { }
+  @Input() product: any;
+
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
+  }
+
+  openProduct(e, product): void {
+    this.matDialog.open(ModalProductComponent, {data: {title: 'Редактировать профиль'}});
+    console.log(product);
   }
 
 }

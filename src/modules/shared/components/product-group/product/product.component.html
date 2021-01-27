@@ -1,14 +1,16 @@
-<div class="product">
+<a class="product"
+   (click)="openProduct($event, product)"
+>
   <div class="product__media">
     <img src="assets/images/bottle-wine.jpg" alt="">
   </div>
 
   <div class="product__preview">
-    <h4 class="product__title">Title</h4>
+    <h4 class="product__title">{{product.name}}</h4>
 
-    <div class="product__description">description description description description description description</div>
+    <div class="product__description">{{product.description}}</div>
 
-    <div class="product__price">$234</div>
+    <div class="product__price">{{product.price}}</div>
   </div>
 
-</div>
+</a>

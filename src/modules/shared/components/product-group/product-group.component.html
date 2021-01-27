@@ -1,17 +1,11 @@
 <div class="product-group">
-  <h3 class="product-group__title">Wine</h3>
+  <h3 class="product-group__title" id="{{productGroup.id}}">{{productGroup.title}}</h3>
 
   <ul class="product-group__list">
-    <li class="product-group__item">
-      <app-product></app-product>
-    </li>
-
-    <li class="product-group__item">
-      <app-product></app-product>
-    </li>
-
-    <li class="product-group__item">
-      <app-product></app-product>
+    <li class="product-group__item"
+        *ngFor="let product of productGroup.list"
+    >
+      <app-product [product]="product"></app-product>
     </li>
   </ul>
 </div>

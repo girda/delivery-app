@@ -18,16 +18,14 @@
 
   </div>
 
-  <div class="product-list__group">
-    <app-product-group></app-product-group>
-  </div>
-
-  <div class="product-list__group">
-    <app-product-group></app-product-group>
+  <div class="product-list__group"
+       *ngFor="let productGroup of productListData"
+  >
+    <app-product-group [productGroup]="productGroup"></app-product-group>
   </div>
 
   <button class="product-list__btn"
-          (window:scroll)="fixedBtn($event)"
+          (window:scroll)="removeTextBtn($event)"
           (click)="openMenu()"
   >
     <svg-icon-sprite

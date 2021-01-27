@@ -12,13 +12,15 @@
       <div class="profile__phone">+38 063 333 22 77</div>
     </div>
 
-    <div class="profile__edit">
+    <button class="profile__edit"
+            (click)="openProfileEdit()"
+    >
       <svg-icon-sprite
         [src]="'assets/sprites/sprite.svg#edit'"
         [width]="'30px'"
         [viewBox]="'0 0 24 24'"
         class="profile__svg"
       ></svg-icon-sprite>
-    </div>
+    </button>
   </div>
 </div>

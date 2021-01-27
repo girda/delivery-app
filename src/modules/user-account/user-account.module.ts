@@ -6,12 +6,14 @@ import {UserAccountRoutes} from './user-account.routes';
 import {UserAccountComponent} from './user-account.component';
 import { ProfileComponent } from './components/profile/profile.component';
 import { ListComponent } from './components/list/list.component';
+import {SharedModule} from '../shared/shared.module';
 
 @NgModule({
   imports: [
     UserAccountRoutes,
     IconSpriteModule,
-    CommonModule
+    CommonModule,
+    SharedModule
   ],
   declarations: [
     UserAccountComponent,

@@ -1,0 +1,25 @@
+<div class="modal">
+<!--  <h3 class="modal__title"></h3>-->
+
+  <button class="modal__btn-close"
+          (click)="closeModal()"
+  >
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#close'"
+      [width]="'25px'"
+      [viewBox]="'0 0 32 32'"
+      class="modal__svg"
+    ></svg-icon-sprite>
+  </button>
+
+  <app-product-card></app-product-card>
+
+  <div class="modal__btns">
+    <button type="button"
+            mat-raised-button
+            color="primary"
+    >
+      Сохранить
+    </button>
+  </div>
+</div>

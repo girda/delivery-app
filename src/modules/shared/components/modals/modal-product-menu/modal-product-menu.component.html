@@ -1,14 +1,28 @@
-<div class="modal-product-menu">
-  <h3 class="modal-product-menu__title">{{data.title}}</h3>
+<div class="modal">
+  <h3 class="modal__title">{{data.title}}</h3>
 
-  <button class="modal-product-menu__btn-close"
+  <button class="modal__btn-close"
           (click)="closeModal()"
   >
     <svg-icon-sprite
       [src]="'assets/sprites/sprite.svg#close'"
       [width]="'25px'"
       [viewBox]="'0 0 32 32'"
-      class="modal-product-menu__svg"
+      class="modal__svg"
     ></svg-icon-sprite>
   </button>
+
+  <ul class="menu-list">
+    <li class="menu-list__item"
+        *ngFor="let item of data.menuList"
+    >
+      <a
+         class="menu-list__link"
+         (click)="scrollToProduct(item.id)"
+      >
+        <span class="menu-list__text">{{item.title}}</span>
+        <span class="menu-list__count">{{item.list.length}}</span>
+      </a>
+    </li>
+  </ul>
 </div>
