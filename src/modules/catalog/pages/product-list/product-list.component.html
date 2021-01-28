@@ -16,6 +16,18 @@
       <span>LOGO</span>
     </div>
 
+    <div class="product-list__basket"
+         (click)="openBasket()"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#basket'"
+        [width]="'30px'"
+        [attr.style]="'color: #000000'"
+        [viewBox]="'0 0 24 24'"
+        class="product-list__svg"
+      ></svg-icon-sprite>
+    </div>
+
   </div>
 
   <div class="product-list__group"

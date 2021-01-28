@@ -13,6 +13,7 @@ import {MatInputModule} from '@angular/material/input';
 import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { ModalProductComponent } from './components/modals/modal-product/modal-product.component';
+import { ModalBasketComponent } from './components/modals/modal-basket/modal-basket.component';
 
 @NgModule({
   imports: [
@@ -30,7 +31,8 @@ import { ModalProductComponent } from './components/modals/modal-product/modal-p
     ProductComponent,
     ModalProductMenuComponent,
     ModalProfileEditComponent,
-    ModalProductComponent
+    ModalProductComponent,
+    ModalBasketComponent
   ],
   exports: [
     ProductCardComponent,

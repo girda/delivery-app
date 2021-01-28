@@ -17,6 +17,7 @@
         <svg-icon-sprite
           [src]="'assets/sprites/sprite.svg#location'"
           [width]="'20px'"
+          [viewBox]="'0 0 24 24'"
           class="user-location__svg"
         ></svg-icon-sprite>
       </div>
@@ -33,7 +34,9 @@
       </div>
     </div>
 
-    <div class="header__icon">
+    <div class="header__icon"
+         (click)="openBasket()"
+    >
       <svg-icon-sprite
         [src]="'assets/sprites/sprite.svg#basket'"
         [width]="'30px'"

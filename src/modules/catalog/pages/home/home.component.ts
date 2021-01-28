@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import {MatDialog} from '@angular/material/dialog';
+import {ModalBasketComponent} from '../../../shared/components/modals/modal-basket/modal-basket.component';
 declare var device;
 
 @Component({
@@ -19,7 +21,7 @@ export class HomeComponent implements OnInit {
     // {img: 'catalog-7.webp', title: 'Что угодно'},
   ];
 
-  constructor() { }
+  constructor(public matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -34,37 +36,9 @@ export class HomeComponent implements OnInit {
                            serial: ${device.serial}<br>`;
   }
 
-  showGeolocationDetails(): void {
-    let p;
-    const onSuccess = (position) => {
-      alert(position.coords.latitude);
-      alert('Latitude: '          + position.coords.latitude          + '\n' +
-        'Longitude: '         + position.coords.longitude         + '\n' +
-        'Altitude: '          + position.coords.altitude          + '\n' +
-        'Accuracy: '          + position.coords.accuracy          + '\n' +
-        'Altitude Accuracy: ' + position.coords.altitudeAccuracy  + '\n' +
-        'Heading: '           + position.coords.heading           + '\n' +
-        'Speed: '             + position.coords.speed             + '\n' +
-        'Timestamp: '         + position.timestamp                + '\n');
-    };
-
-    // onError Callback receives a PositionError object
-    //
-    const onError = (error) => {
-      alert('code: '    + error.code    + '\n' +
-        'message: ' + error.message + '\n');
-    }
-
-    try {
-
-      navigator.geolocation.getCurrentPosition(onSuccess, onError);
-    } catch (e) {
-      alert(e.message);
-    }
-
+  openBasket(): void {
+    this.matDialog.open(ModalBasketComponent, {
+      height: '100vh'
+    });
   }
-
-
-
-
 }

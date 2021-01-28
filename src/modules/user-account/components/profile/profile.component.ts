@@ -16,7 +16,10 @@ export class ProfileComponent implements OnInit {
   }
 
   openProfileEdit(): void {
-    this.matDialog.open(ModalProfileEditComponent, {data: {title: 'Редактировать профиль'}});
+    this.matDialog.open(ModalProfileEditComponent, {
+      height: '85vh',
+      data: {title: 'Редактировать профиль'}
+    });
   }
 
 }

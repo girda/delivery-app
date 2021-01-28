@@ -1,6 +1,7 @@
 import {Component, ElementRef, OnInit, ViewChild} from '@angular/core';
 import {MatDialog} from "@angular/material/dialog";
 import {ModalProductMenuComponent} from "../../../shared/components/modals/modal-product-menu/modal-product-menu.component";
+import {ModalBasketComponent} from '../../../shared/components/modals/modal-basket/modal-basket.component';
 
 @Component({
   selector: 'app-product-list',
@@ -84,7 +85,16 @@ export class ProductListComponent implements OnInit {
   }
 
   openMenu(): void {
-    this.matDialog.open(ModalProductMenuComponent, {data: {title: 'Меню', menuList: this.productListData}});
+    this.matDialog.open(ModalProductMenuComponent, {
+      height: '85vh',
+      data: {title: 'Меню', menuList: this.productListData}
+    });
+  }
+
+  openBasket(): void {
+    this.matDialog.open(ModalBasketComponent, {
+      height: '100vh'
+    });
   }
 
 }

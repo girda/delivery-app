@@ -1,0 +1,52 @@
+<div class="modal">
+  <div class="modal__header">
+    <button class="modal__back"
+            (click)="closeModal()"
+    >
+      <svg-icon-sprite
+        [src]="'assets/sprites/sprite.svg#arrow-left'"
+        [width]="'30px'"
+        [viewBox]="'0 0 24 24'"
+        class="modal__svg"
+      ></svg-icon-sprite>
+      Назад
+    </button>
+
+    <h2 class="modal__header-title">Корзина</h2>
+  </div>
+
+  <div class="modal__address">
+    <form class="form-address">
+      <h3 class="form-address__title">Куда привезти?</h3>
+
+      <div class="form-address__street">бульвар Лесі Українки, 28, Київ, Украина, 02000</div>
+
+      <div class="form-address__row">
+        <div class="form-address__input">
+          <label for="entrance">Подъезд</label>
+          <input type="number" id="entrance">
+        </div>
+
+        <div class="form-address__input">
+          <label for="floor">Этаж</label>
+          <input type="number" id="floor">
+        </div>
+
+        <div class="form-address__input">
+          <label for="apartment-number">№ кв.</label>
+          <input type="number" id="apartment-number">
+        </div>
+      </div>
+
+      <div class="form-address__row">
+        <textarea placeholder="Коментарий к адресу"></textarea>
+      </div>
+    </form>
+  </div>
+
+  <div class="modal__order">
+    <div class="order">
+      <h3 class="order__title">Ваш заказ</h3>
+    </div>
+  </div>
+</div>
