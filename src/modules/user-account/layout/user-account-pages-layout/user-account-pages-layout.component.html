@@ -1,3 +1,16 @@
-<p>user-account-pages-layout works!</p>
+<div class="header">
+  <a class="header__back"
+     routerLink="/user-account"
+  >
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#arrow-left'"
+      [width]="'30px'"
+      [viewBox]="'0 0 24 24'"
+      class="header__svg"
+    ></svg-icon-sprite>
+    Профиль
+  </a>
+</div>
+
 
 <router-outlet></router-outlet>

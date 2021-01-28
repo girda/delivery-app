@@ -1,0 +1,19 @@
+@import "../../../shared/styles/variables";
+
+.header {
+    padding: 10px 0;
+    background-color: $white;
+
+    &__back {
+      display: flex;
+      align-items: center;
+      font-weight: 700;
+      color: $secondary-color-text;
+    }
+
+  &__svg {
+    display: flex;
+  }
+}
+
+
