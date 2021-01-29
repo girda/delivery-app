@@ -1,4 +1,5 @@
 import {Component, OnInit} from '@angular/core';
+import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-user-account-pages-layout',
@@ -7,10 +8,13 @@ import {Component, OnInit} from '@angular/core';
 })
 export class UserAccountPagesLayoutComponent implements OnInit {
 
-  constructor() {
+  title: string;
+
+  constructor(private route: ActivatedRoute) {
   }
 
   ngOnInit(): void {
+    this.title = this.route.snapshot.firstChild.data.title;
   }
 
 }

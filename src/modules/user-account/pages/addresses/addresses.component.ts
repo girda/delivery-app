@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ActivatedRoute} from '@angular/router';
 
 @Component({
   selector: 'app-addresses',
@@ -8,11 +7,10 @@ import {ActivatedRoute} from '@angular/router';
 })
 export class AddressesComponent implements OnInit {
 
-  constructor(private route: ActivatedRoute) {
+  constructor() {
   }
 
   ngOnInit(): void {
-    console.log(this.route.snapshot.data.title);
   }
 
 }

@@ -18,7 +18,10 @@ export class ProductComponent implements OnInit {
   }
 
   openProduct(e, product): void {
-    this.matDialog.open(ModalProductComponent, {data: {title: 'Редактировать профиль'}});
+    this.matDialog.open(ModalProductComponent, {
+      height: '85vh',
+      data: {title: 'Редактировать профиль'}
+    });
     console.log(product);
   }
 

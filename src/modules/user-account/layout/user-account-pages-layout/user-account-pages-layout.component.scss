@@ -1,19 +1,41 @@
 @import "../../../shared/styles/variables";
 
 .header {
-    padding: 10px 0;
-    background-color: $white;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  padding: 10px 0;
+  height: 50px;
+  background-color: $white;
+  border-bottom: 1px solid $gray;
 
-    &__back {
-      display: flex;
-      align-items: center;
-      font-weight: 700;
-      color: $secondary-color-text;
-    }
+  &__back {
+    display: flex;
+    align-items: center;
+    font-weight: 500;
+    color: $secondary-color-text;
+  }
 
   &__svg {
     display: flex;
   }
+
+  &__title {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 16px;
+    font-weight: 700;
+  }
 }
 
+.main {
+  min-height: 100vh;
+  padding-top: 50px;
+  background-color: $white;
+}
 
