@@ -14,6 +14,8 @@ import {ReactiveFormsModule} from '@angular/forms';
 import {MatButtonModule} from '@angular/material/button';
 import { ModalProductComponent } from './components/modals/modal-product/modal-product.component';
 import { ModalBasketComponent } from './components/modals/modal-basket/modal-basket.component';
+import { ModalConfirmComponent } from './components/modals/modal-confirm/modal-confirm.component';
+import { ModalAddCreditCardComponent } from './components/modals/modal-add-credit-card/modal-add-credit-card.component';
 
 @NgModule({
   imports: [
@@ -32,7 +34,9 @@ import { ModalBasketComponent } from './components/modals/modal-basket/modal-bas
     ModalProductMenuComponent,
     ModalProfileEditComponent,
     ModalProductComponent,
-    ModalBasketComponent
+    ModalBasketComponent,
+    ModalConfirmComponent,
+    ModalAddCreditCardComponent
   ],
   exports: [
     ProductCardComponent,

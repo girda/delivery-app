@@ -7,6 +7,12 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PromoCodesComponent implements OnInit {
 
+  conditions = [
+    {title: 'Заказ от 250 грн'},
+    {title: 'Безналичного расчета'},
+    {title: 'Также, 1 заказ = 1 промокод'}
+  ];
+
   constructor() { }
 
   ngOnInit(): void {

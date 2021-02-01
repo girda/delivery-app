@@ -1,0 +1,40 @@
+import {IProductImages} from './product-images.model';
+import {IProductTranslations} from './product-translations.model';
+import {IProductAttributesNamesValues} from './product-attributes-names-values.model';
+import {IManufacturerTranslations} from './manufacturer.model';
+import {ICountryTranslations} from './country.model';
+import {IProductLeftover} from './leftover.model';
+import {ICardHeaderAttribute} from './card-header-attribute.model';
+
+export interface IProductItem {
+  id: number;
+  externalId: string;
+  baseUnit: string;
+  referenceCode: string;
+  weight: number;
+  dimensions: string;
+  isActive: boolean;
+  basePrice: number;
+  dateAdded: Date;
+  manufacturerId: number;
+  currencyCode: string;
+  currencyDigitalCode: number;
+  currencySymbol: string;
+  productStateId: number;
+  categoryId: number;
+  isFavorite?: boolean;
+  productImages: Array<IProductImages>;
+  productTranslations: Array<IProductTranslations>;
+  productStateName?: string;
+  manufacturerName?: string;
+  productCategories?: string[];
+  isVatIncludedInPrice?: boolean;
+  productAttributesNames?: string[];
+  productAttributesNamesValues?: IProductAttributesNamesValues[];
+  countryTranslations?: ICountryTranslations[];
+  manufacturerTranslations?: IManufacturerTranslations[];
+  productBarcodes?: string[];
+  productPromotions?: any;
+  productLeftover?: IProductLeftover[];
+  cardHeaderAttributes?: ICardHeaderAttribute[];
+}

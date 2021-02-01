@@ -1,1 +1,52 @@
-<p>promo-codes works!</p>
+<div class="promo-codes">
+  <div class="promo-codes__conditions">
+    <h3 class="promo-codes__title">Промокоды действительны при условии</h3>
+
+    <div class="promo-codes__condition" *ngFor="let condition of conditions">
+      <div class="promo-codes__condition-icon">
+        <svg-icon-sprite
+          [src]="'assets/sprites/sprite.svg#check'"
+          [width]="'20px'"
+          [viewBox]="'0 0 24 24'"
+          [attr.style]="'color: #ff5500;'"
+          class="promo-codes__condition-svg"
+        ></svg-icon-sprite>
+      </div>
+      <div class="promo-codes__condition-text">{{condition.title}}</div>
+    </div>
+
+  </div>
+
+  <div class="promo-codes__add">
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#plus'"
+      [width]="'30px'"
+      [viewBox]="'0 0 24 24'"
+      [attr.style]="'color: #ff5500;'"
+      class="promo-codes__add-svg"
+    ></svg-icon-sprite>
+    <div class="promo-codes__add-text">Добавить промокод</div>
+  </div>
+
+  <div class="promo-codes__row">
+    <h3 class="promo-codes__title">Активные</h3>
+    <div class="promo-codes__items">
+      <div class="promo-codes__item" *ngFor="let i of [1, 1, 1, 1]">
+        <app-promo-code></app-promo-code>
+      </div>
+    </div>
+
+  </div>
+
+  <div class="promo-codes__row">
+    <h3 class="promo-codes__title">Не активные</h3>
+    <div class="promo-codes__items">
+
+      <div class="promo-codes__item" *ngFor="let i of [1, 1, 1, 1]">
+        <app-promo-code></app-promo-code>
+      </div>
+
+    </div>
+  </div>
+
+</div>

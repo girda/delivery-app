@@ -1,0 +1,26 @@
+@import '../modal-default';
+
+.modal {
+  position: relative;
+
+  &__title {
+    padding-right: 40px;
+    margin-bottom: 40px;
+  }
+
+  &__btn-close {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+  }
+
+  &__svg {
+    display: flex;
+  }
+
+  &__btns {
+    display: flex;
+    justify-content: space-between;
+  }
+}

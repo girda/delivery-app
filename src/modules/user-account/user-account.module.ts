@@ -14,13 +14,17 @@ import {PromoCodesComponent} from './pages/promo-codes/promo-codes.component';
 import {SupportComponent} from './pages/support/support.component';
 import {FeedbackComponent} from './pages/feedback/feedback.component';
 import {UserAccountPagesLayoutComponent} from './layout/user-account-pages-layout/user-account-pages-layout.component';
+import { OrderComponent } from './pages/orders/order/order.component';
+import {MatButtonModule} from '@angular/material/button';
+import { PromoCodeComponent } from './pages/promo-codes/promo-code/promo-code.component';
 
 @NgModule({
   imports: [
     UserAccountRoutes,
     IconSpriteModule,
     CommonModule,
-    SharedModule
+    SharedModule,
+    MatButtonModule
   ],
   declarations: [
     UserAccountComponent,
@@ -32,7 +36,9 @@ import {UserAccountPagesLayoutComponent} from './layout/user-account-pages-layou
     PromoCodesComponent,
     SupportComponent,
     FeedbackComponent,
-    UserAccountPagesLayoutComponent
+    UserAccountPagesLayoutComponent,
+    OrderComponent,
+    PromoCodeComponent
   ]
 })
 export class UserAccountModule {

@@ -1,0 +1,30 @@
+.order {
+  display: flex;
+  padding: 10px;
+  border-radius: 4px;
+  box-shadow: 0 1px 3px 0 rgb(0 0 0 / 20%), 0 2px 2px 0 rgb(0 0 0 / 12%), 0 0 2px 0 rgb(0 0 0 / 14%);
+
+  &__media {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 30%;
+    margin-right: 10px;
+  }
+
+  &__info {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  }
+
+  &__text {
+    margin-bottom: 5px;
+  }
+
+  &__btn {
+    display: flex;
+    justify-content: center;
+    margin-top: auto;
+  }
+}

@@ -1,0 +1,26 @@
+<div class="modal">
+  <h3 class="modal__title">{{data.title}}</h3>
+
+  <button class="modal__btn-close"
+          (click)="closeModal()"
+  >
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#close'"
+      [width]="'25px'"
+      [viewBox]="'0 0 32 32'"
+      class="modal__svg"
+    ></svg-icon-sprite>
+  </button>
+
+  <div class="modal__btns">
+    <button mat-raised-button
+            color="basic"
+            (click)="cancel()"
+    >Отмена</button>
+
+    <button mat-raised-button
+            color="warn"
+            (click)="confirm()"
+    >Подтвердить</button>
+  </div>
+</div>

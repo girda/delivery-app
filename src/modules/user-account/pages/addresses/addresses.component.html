@@ -1,1 +1,19 @@
-<p>addresses works!</p>
+<div class="address">
+  <div class="address__title">Недавние адреса</div>
+
+  <ul class="address__list">
+    <li class="address__item" *ngFor="let i of [null, null, null]">
+      <a class="address__link">
+        <span class="address__text">бульвар Лесі Українки, 28, Київ, Украина, 02000</span>
+        <div class="address__item-arrow">
+          <svg-icon-sprite
+            [src]="'assets/sprites/sprite.svg#arrow-right'"
+            [width]="'20px'"
+            [viewBox]="'0 0 24 24'"
+            class="address__item-svg"
+          ></svg-icon-sprite>
+        </div>
+      </a>
+    </li>
+  </ul>
+</div>

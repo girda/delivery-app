@@ -1,0 +1,26 @@
+@import '../../../shared/styles/variables';
+
+.address {
+
+  &__title {
+    padding: 15px;
+    font-size: 16px;
+    font-weight: 500;
+  }
+
+  &__item {
+    border-bottom: 1px solid $gray;
+  }
+
+  &__link {
+    display: flex;
+    justify-content: space-between;
+    padding: 15px 5px 15px 15px;
+  }
+
+  &__text {
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+}

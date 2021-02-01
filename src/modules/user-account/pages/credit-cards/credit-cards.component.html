@@ -1,1 +1,41 @@
-<p>credit-cards works!</p>
+<div class="credit-cards">
+
+  <ul class="credit-cards__list">
+    <li *ngFor="let card of creditCards">
+      <div class="card">
+
+        <div class="card__logo">
+          <img src="assets/images/visa.svg" alt="">
+        </div>
+
+        <div class="card__number">{{card.number}}</div>
+
+        <button class="card__delete"
+                (click)="deleteCard(card)"
+        >
+          <svg-icon-sprite
+            [src]="'assets/sprites/sprite.svg#delete'"
+            [width]="'20px'"
+            [viewBox]="'0 0 24 24'"
+            [attr.style]="'color: #ff5500;'"
+            class="card__svg"
+          ></svg-icon-sprite>
+        </button>
+
+      </div>
+    </li>
+  </ul>
+
+  <button class="credit-cards__add"
+          (click)="openModalAddCreditCard()"
+  >
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#plus'"
+      [width]="'30px'"
+      [viewBox]="'0 0 24 24'"
+      [attr.style]="'color: #ff5500;'"
+      class="credit-cards__add-svg"
+    ></svg-icon-sprite>
+    <div class="credit-cards__add-text">Добавить карту</div>
+  </button>
+</div>

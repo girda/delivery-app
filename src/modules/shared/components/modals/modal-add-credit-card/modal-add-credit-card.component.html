@@ -1,0 +1,79 @@
+<div class="modal">
+  <h3 class="modal__title">{{data.title}}</h3>
+
+  <button class="modal__btn-close"
+          (click)="closeModal()"
+  >
+    <svg-icon-sprite
+      [src]="'assets/sprites/sprite.svg#close'"
+      [width]="'25px'"
+      [viewBox]="'0 0 32 32'"
+      class="modal__svg"
+    ></svg-icon-sprite>
+  </button>
+
+  <form class="form">
+
+    <div class="form__in">
+      <mat-form-field>
+        <mat-label>Номер карты</mat-label>
+        <input
+          matInput
+          placeholder="XXXX XXXX XXXX XXXX"
+        >
+        <!--      <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">-->
+        <!--        <mat-error *ngIf="form.get('email').errors['email']">-->
+        <!--          Введите коректеый email.-->
+        <!--        </mat-error>-->
+        <!--      </mat-error>-->
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Срок действия</mat-label>
+        <input
+          matInput
+          placeholder="ММ/ГГ"
+        >
+        <!--      <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">-->
+        <!--        <mat-error *ngIf="form.get('email').errors['email']">-->
+        <!--          Введите коректеый email.-->
+        <!--        </mat-error>-->
+        <!--      </mat-error>-->
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>ФИО владельца</mat-label>
+        <input
+          matInput
+          placeholder="ФИО владельца карты"
+        >
+        <!--      <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">-->
+        <!--        <mat-error *ngIf="form.get('email').errors['email']">-->
+        <!--          Введите коректеый email.-->
+        <!--        </mat-error>-->
+        <!--      </mat-error>-->
+      </mat-form-field>
+
+      <mat-form-field>
+        <mat-label>Код CVV</mat-label>
+        <input
+          matInput
+          placeholder="XXX"
+        >
+        <!--      <mat-error *ngIf="form.get('email').invalid && form.get('email').touched">-->
+        <!--        <mat-error *ngIf="form.get('email').errors['email']">-->
+        <!--          Введите коректеый email.-->
+        <!--        </mat-error>-->
+        <!--      </mat-error>-->
+      </mat-form-field>
+    </div>
+
+    <button type="submit"
+            mat-raised-button
+            color="primary"
+    >
+      Добавить карту
+    </button>
+  </form>
+
+</div>
