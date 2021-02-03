@@ -4,7 +4,7 @@
        routerLink="/catalog/home"
     >
       <svg-icon-sprite
-        [src]="'assets/sprites/sprite.svg#arrow-left'"
+        [src]="'./assets/sprites/sprite.svg#arrow-left'"
         [width]="'30px'"
         [viewBox]="'0 0 24 24'"
         class="product-list__svg"
@@ -16,16 +16,8 @@
       <span>LOGO</span>
     </div>
 
-    <div class="product-list__basket"
-         (click)="openBasket()"
-    >
-      <svg-icon-sprite
-        [src]="'assets/sprites/sprite.svg#basket'"
-        [width]="'30px'"
-        [attr.style]="'color: #000000'"
-        [viewBox]="'0 0 24 24'"
-        class="product-list__svg"
-      ></svg-icon-sprite>
+    <div class="product-list__basket">
+      <app-basket-status [colorIcon]="'#000000'"></app-basket-status>
     </div>
 
   </div>
@@ -41,7 +33,7 @@
           (click)="openMenu()"
   >
     <svg-icon-sprite
-      [src]="'assets/sprites/sprite.svg#menu'"
+      [src]="'./assets/sprites/sprite.svg#menu'"
       [width]="'25px'"
       [viewBox]="'0 0 24 24'"
       class="product-list__svg"

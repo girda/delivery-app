@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import {ModalBasketComponent} from '../../../shared/components/modals/modal-basket/modal-basket.component';
 import {MatDialog} from '@angular/material/dialog';
 import {ModalConfirmComponent} from '../../../shared/components/modals/modal-confirm/modal-confirm.component';
 import {ICreditCard} from '../../../shared/models/credit-card.model';
@@ -18,7 +17,7 @@ export class CreditCardsComponent implements OnInit {
     {number: '56•• •••• •••• 3456'},
   ]
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }

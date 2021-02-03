@@ -1,6 +1,6 @@
-import { Component, OnInit } from '@angular/core';
-import {MatDialog} from '@angular/material/dialog';
-import {ModalBasketComponent} from '../../../shared/components/modals/modal-basket/modal-basket.component';
+import {Component, OnInit} from '@angular/core';
+import {ILanguage} from '../../../shared/models/language.model';
+
 declare var device;
 
 @Component({
@@ -11,6 +11,12 @@ declare var device;
 export class HomeComponent implements OnInit {
   myDeviceData: string;
 
+  languages: ILanguage[] = [
+    {id: 1, code: 'en', countryIsoCode: 'us', name: 'English', default: false},
+    {id: 2, code: 'ru', countryIsoCode: 'ru', name: 'Русский', default: true}
+  ];
+  selectedLanguage: string;
+
   catalogData = [
     {img: 'catalog-1.webp', title: 'Супермаркеты'},
     {img: 'catalog-2.webp', title: 'Кофе и десерты'},
@@ -18,12 +24,18 @@ export class HomeComponent implements OnInit {
     {img: 'catalog-4.webp', title: 'Подарки'},
     {img: 'catalog-5.webp', title: 'Аптеки'},
     {img: 'catalog-6.webp', title: 'Еда'},
-    // {img: 'catalog-7.webp', title: 'Что угодно'},
+    {img: 'catalog-7.webp', title: 'Что угодно'}
   ];
 
-  constructor(public matDialog: MatDialog) { }
+  constructor() {
+  }
 
   ngOnInit(): void {
+    this.languages.forEach(language => {
+      if (language.default) {
+        this.selectedLanguage = language.code;
+      }
+    });
   }
 
   showDeviceDetails(): void {
@@ -36,9 +48,5 @@ export class HomeComponent implements OnInit {
                            serial: ${device.serial}<br>`;
   }
 
-  openBasket(): void {
-    this.matDialog.open(ModalBasketComponent, {
-      height: '100vh'
-    });
-  }
+
 }

@@ -1,0 +1,25 @@
+@import '../../styles/variables';
+
+.basket-status {
+  position: relative;
+  display: flex;
+
+  &__svg {
+    display: flex;
+  }
+
+  &__badge {
+    position: absolute;
+    right: 5px;
+    top: -7px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 18px;
+    height: 18px;
+    font-size: 10px;
+    font-weight: 700;
+    background-color: $white;
+    border-radius: 50%;
+  }
+}

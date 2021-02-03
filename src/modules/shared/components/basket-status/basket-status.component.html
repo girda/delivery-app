@@ -1,0 +1,16 @@
+<div class="basket-status"
+     (click)="openBasket()"
+>
+  <svg-icon-sprite
+    [src]="'assets/sprites/sprite.svg#basket'"
+    [width]="'30px'"
+    [attr.style]="'color:'+colorIcon"
+    [viewBox]="'0 0 24 24'"
+    class="basket-status__svg"
+  ></svg-icon-sprite>
+  <div *ngIf="basketService.basket.items.length"
+       class="basket-status__badge"
+       style="border: 1px solid {{colorBadge}}; color: {{colorBadge}};"
+  >{{basketService.basket.items.length}}</div>
+</div>
+

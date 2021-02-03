@@ -12,7 +12,7 @@ export class ProductComponent implements OnInit {
 
   @Input() product: any;
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -20,7 +20,7 @@ export class ProductComponent implements OnInit {
   openProduct(e, product): void {
     this.matDialog.open(ModalProductComponent, {
       height: '85vh',
-      data: {title: 'Редактировать профиль'}
+      data: {title: 'Редактировать профиль', product}
     });
     console.log(product);
   }

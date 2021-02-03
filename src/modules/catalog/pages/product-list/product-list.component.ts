@@ -15,12 +15,28 @@ export class ProductListComponent implements OnInit {
         {
           name: 'Chianti Classico',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Gran Selezione',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         }
       ]
     },
@@ -29,22 +45,54 @@ export class ProductListComponent implements OnInit {
         {
           name: 'Chianti Classico',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Gran Selezione',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Vigneto La Casuccia',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Castello di Ama',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         }
       ]
     },
@@ -53,17 +101,41 @@ export class ProductListComponent implements OnInit {
         {
           name: 'Chianti Classico',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Gran Selezione',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         },
         {
           name: 'Vigneto La Casuccia',
           description: 'Lorem ipsum dolor sit amet, consectetur adipisicing elit. Beatae dignissimos dolorem, enim fuga ipsam molestias odio soluta suscipit tempora vitae!',
-          price: '$256'
+          price: '$256',
+          countryTranslations: [
+            {languageCode: 'en', name: 'Albania', fullName: 'Republic of Albania'},
+            {languageCode: 'ru', name: 'Албания', fullName: 'Республика Албания'}
+          ],
+          productAttributesNamesValues: [
+            {languageCode: 'ru', attributeName: 'Специальность', attributeValue: '3.1'},
+            {languageCode: 'ru', attributeName: 'Подача', attributeValue: '16 °C'}
+          ]
         }
       ]
     }
@@ -71,7 +143,7 @@ export class ProductListComponent implements OnInit {
 
   @ViewChild('buttonMenuText') buttonMenuText: ElementRef;
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }
@@ -88,12 +160,6 @@ export class ProductListComponent implements OnInit {
     this.matDialog.open(ModalProductMenuComponent, {
       height: '85vh',
       data: {title: 'Меню', menuList: this.productListData}
-    });
-  }
-
-  openBasket(): void {
-    this.matDialog.open(ModalBasketComponent, {
-      height: '100vh'
     });
   }
 

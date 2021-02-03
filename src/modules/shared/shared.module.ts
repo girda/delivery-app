@@ -16,6 +16,7 @@ import { ModalProductComponent } from './components/modals/modal-product/modal-p
 import { ModalBasketComponent } from './components/modals/modal-basket/modal-basket.component';
 import { ModalConfirmComponent } from './components/modals/modal-confirm/modal-confirm.component';
 import { ModalAddCreditCardComponent } from './components/modals/modal-add-credit-card/modal-add-credit-card.component';
+import { BasketStatusComponent } from './components/basket-status/basket-status.component';
 
 @NgModule({
   imports: [
@@ -36,12 +37,14 @@ import { ModalAddCreditCardComponent } from './components/modals/modal-add-credi
     ModalProductComponent,
     ModalBasketComponent,
     ModalConfirmComponent,
-    ModalAddCreditCardComponent
+    ModalAddCreditCardComponent,
+    BasketStatusComponent
   ],
   exports: [
     ProductCardComponent,
     ProductGroupComponent,
-    MatDialogModule
+    MatDialogModule,
+    BasketStatusComponent
   ]
 })
 export class SharedModule {

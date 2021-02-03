@@ -9,7 +9,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 export class ModalAddCreditCardComponent implements OnInit {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-              public dialogRef: MatDialogRef<ModalAddCreditCardComponent>) { }
+              private dialogRef: MatDialogRef<ModalAddCreditCardComponent>) { }
 
   ngOnInit(): void {
   }

@@ -15,7 +15,7 @@
     <div class="user-location">
       <div class="user-location__icon">
         <svg-icon-sprite
-          [src]="'assets/sprites/sprite.svg#location'"
+          [src]="'./assets/sprites/sprite.svg#location'"
           [width]="'20px'"
           [viewBox]="'0 0 24 24'"
           class="user-location__svg"
@@ -34,16 +34,8 @@
       </div>
     </div>
 
-    <div class="header__icon"
-         (click)="openBasket()"
-    >
-      <svg-icon-sprite
-        [src]="'assets/sprites/sprite.svg#basket'"
-        [width]="'30px'"
-        [attr.style]="'color: #ffffff'"
-        [viewBox]="'0 0 24 24'"
-        class="header__svg"
-      ></svg-icon-sprite>
+    <div class="header__icon">
+      <app-basket-status [colorIcon]="'#ffffff'" [colorBadge]="'#ff5500'"></app-basket-status>
     </div>
 
     <!--    <button (click)="showDeviceDetails()">showDeviceDetails</button>-->
@@ -71,6 +63,24 @@
   </main>
 
   <footer class="footer">
+
+    <div class="footer__languages languages">
+      <button mat-button
+              [matMenuTriggerFor]="menu"
+              class="languages__icon"
+      >
+        <img src="./assets/images/{{selectedLanguage}}.png">
+      </button>
+      <mat-menu #menu="matMenu">
+        <button mat-menu-item
+                *ngFor="let language of languages"
+                class="languages__icon"
+        >
+          <img src="./assets/images/{{language.code}}.png">
+        </button>
+      </mat-menu>
+    </div>
+
   </footer>
 </div>
 

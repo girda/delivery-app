@@ -10,7 +10,7 @@ import {ModalProfileEditComponent} from '../../../shared/components/modals/modal
 })
 export class ProfileComponent implements OnInit {
 
-  constructor(public matDialog: MatDialog) { }
+  constructor(private matDialog: MatDialog) { }
 
   ngOnInit(): void {
   }

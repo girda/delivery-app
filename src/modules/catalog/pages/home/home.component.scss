@@ -36,6 +36,7 @@
 }
 
 .footer {
+  display: flex;
   margin-top: auto;
 }
 
@@ -78,5 +79,28 @@
 
   }
 
+}
 
+.languages {
+  margin: 0 0 10px auto;
+
+  &__icon {
+    display: flex;
+
+    img {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+
+::ng-deep .mat-menu-panel {
+  min-width: auto!important;
+}
+::ng-deep .mat-menu-item {
+  padding: 0 5px!important;
+  height: auto!important;
+}
+::ng-deep .mat-menu-content {
+  padding: 5px 0!important;
 }

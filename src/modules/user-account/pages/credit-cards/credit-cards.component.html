@@ -5,7 +5,7 @@
       <div class="card">
 
         <div class="card__logo">
-          <img src="assets/images/visa.svg" alt="">
+          <img src="./assets/images/visa.svg" alt="">
         </div>
 
         <div class="card__number">{{card.number}}</div>
@@ -14,7 +14,7 @@
                 (click)="deleteCard(card)"
         >
           <svg-icon-sprite
-            [src]="'assets/sprites/sprite.svg#delete'"
+            [src]="'./assets/sprites/sprite.svg#delete'"
             [width]="'20px'"
             [viewBox]="'0 0 24 24'"
             [attr.style]="'color: #ff5500;'"
@@ -30,7 +30,7 @@
           (click)="openModalAddCreditCard()"
   >
     <svg-icon-sprite
-      [src]="'assets/sprites/sprite.svg#plus'"
+      [src]="'./assets/sprites/sprite.svg#plus'"
       [width]="'30px'"
       [viewBox]="'0 0 24 24'"
       [attr.style]="'color: #ff5500;'"

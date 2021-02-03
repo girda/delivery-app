@@ -12,7 +12,7 @@ export class ModalProfileEditComponent implements OnInit {
   form: FormGroup;
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-              public dialogRef: MatDialogRef<ModalProfileEditComponent>) { }
+              private dialogRef: MatDialogRef<ModalProfileEditComponent>) { }
 
   ngOnInit(): void {
     this.form = new FormGroup({

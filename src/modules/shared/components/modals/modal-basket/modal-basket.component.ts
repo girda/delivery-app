@@ -9,7 +9,7 @@ import {MAT_DIALOG_DATA, MatDialogRef} from '@angular/material/dialog';
 export class ModalBasketComponent implements OnInit, OnDestroy {
 
   constructor(@Inject(MAT_DIALOG_DATA) public data: any,
-              public dialogRef: MatDialogRef<ModalBasketComponent>) { }
+              private dialogRef: MatDialogRef<ModalBasketComponent>) { }
 
   ngOnInit(): void {
     console.log(this.dialogRef.componentInstance)

@@ -5,19 +5,17 @@
           (click)="closeModal()"
   >
     <svg-icon-sprite
-      [src]="'assets/sprites/sprite.svg#close'"
+      [src]="'./assets/sprites/sprite.svg#close'"
       [width]="'25px'"
       [viewBox]="'0 0 32 32'"
       class="modal__svg"
     ></svg-icon-sprite>
   </button>
 
-  <app-product-card></app-product-card>
+  <app-product-card [product]="data.product"></app-product-card>
 
   <div class="modal__description">
-    Lorem ipsum dolor sit amet, consectetur adipisicing elit. Aut consequuntur cum cupiditate debitis dignissimos dolor,
-    doloremque earum eligendi impedit incidunt ipsam laboriosam magnam minus molestias nam necessitatibus non officiis
-    provident quisquam rerum saepe sapiente sit vel velit vitae voluptatem voluptates?
+    {{data.product.description}}
   </div>
 
   <div class="modal__btns">
