@@ -2,6 +2,7 @@ import {Component, OnInit} from '@angular/core';
 import {ILanguage} from '../../../shared/models/language.model';
 
 declare var device;
+declare var smsreader;
 
 @Component({
   selector: 'app-home',
@@ -36,6 +37,19 @@ export class HomeComponent implements OnInit {
         this.selectedLanguage = language.code;
       }
     });
+    alert(JSON.stringify(smsreader));
+    alert(JSON.stringify(smsreader.getAllSMS));
+
+    smsreader.getAllSMS()
+      .then((sms) => {
+          console.log(sms);
+          alert(sms);
+          // Fetches all SMS.
+        },
+        (err) => {
+          console.error(err);
+          alert(err);
+        });
   }
 
   showDeviceDetails(): void {
